@@ -18,10 +18,14 @@ Designed as a flexible foundation for building modern backend services.
     uv sync --frozen
     ```
 
-2. Run the application:
+## How to Run with Docker Compose
+
+1. Build and start the application:
     ```sh
-    uvicorn app.main:app --reload
+    docker-compose up --build
     ```
+
+The API will be available at [http://localhost:8000](http://localhost:8000).
 
 ## License
 
