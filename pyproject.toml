@@ -1,0 +1,30 @@
+[project]
+name = "base-app"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "fastapi>=0.116.1",
+    "psycopg2-binary>=2.9.10",
+    "ruff>=0.12.11",
+    "sqlmodel>=0.0.24",
+    "uvicorn[standard]>=0.35.0",
+]
+
+[tool.ruff]
+exclude = ["venv", ".venv", "build", "dist", "__pycache__"]
+line-length = 120
+indent-width = 4
+
+[tool.ruff.lint]
+# Ustawienia lintingu
+dummy-variable-rgx = "^(_+|(_+[a-zA-Z0-9_]*[a-zA-Z0-9]+?))$"
+select = ["E", "F", "I", "W", "C90"]
+ignore = []
+fixable = ["ALL"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+line-ending = "auto"
